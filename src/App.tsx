@@ -83,11 +83,11 @@ function CheckboxRow({
 
 function FilterChip({ label, onRemove }: ActiveFilter) {
   return (
-    <span className="inline-flex h-[18px] items-center gap-1 rounded-full bg-white px-2 text-[9px] font-medium text-neutral-700 shadow-[0_0_0_1px_rgba(0,0,0,0.06)]">
+    <span className="inline-flex h-[18px] items-center gap-1 rounded-full bg-[#ededed] px-2 text-[9px] font-medium text-[#3f3f3f]">
       {label}
       <button
         aria-label={`Remove ${label} filter`}
-        className="-mr-0.5 grid size-3 place-items-center rounded-full text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-700"
+        className="-mr-0.5 grid size-3 place-items-center rounded-full text-[#7a7a7a] transition-colors hover:bg-[#dddddd] hover:text-neutral-950"
         type="button"
         onClick={onRemove}
       >
@@ -209,7 +209,7 @@ function App() {
                 aria-pressed={inStockOnly}
                 className={[
                   "relative h-[15px] w-[30px] rounded-full transition-colors",
-                  inStockOnly ? "bg-neutral-950" : "bg-neutral-200",
+                  inStockOnly ? "bg-black" : "bg-neutral-200",
                 ].join(" ")}
                 type="button"
                 onClick={() => setInStockOnly(!inStockOnly)}
